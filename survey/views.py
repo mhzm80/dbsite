@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from survey.models import *
-from survey.srializers import *
+from survey.serializers import *
 
 
 # Create your views here.
