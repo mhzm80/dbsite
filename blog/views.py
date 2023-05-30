@@ -7,6 +7,12 @@ from blog.serializers import *
 
 @api_view(['GET'])
 def ap_de_blog(request):
-    a=blog_new.objects.all()
+    a=blog_new1.objects.all()
     x=ser_blog(a,many=True)
     return Response(x.data)
+@api_view(['POST'])
+def take(request):
+    ser=ser_blog(data=request.data)
+    if ser.is_valid():
+        ser.save()
+        return Response({'answare':'save in database'})
