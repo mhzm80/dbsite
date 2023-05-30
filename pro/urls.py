@@ -22,7 +22,8 @@ urlpatterns = [
     path('api/',include('sick.urls')),
     path('api/',include('doctor.urls')),
     path('api/',include('survey.urls')),
-    path('api/',include('noskhe.urls'))
+    path('api/',include('noskhe.urls')),
+    path('api/',include('blog.urls')),
     
 ]
 
