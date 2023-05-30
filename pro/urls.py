@@ -24,6 +24,7 @@ urlpatterns = [
     path('api/',include('survey.urls')),
     path('api/',include('noskhe.urls')),
     path('api/',include('blog.urls')),
+    path('api/',include('pharmacy.urls')),
     
 ]
 
