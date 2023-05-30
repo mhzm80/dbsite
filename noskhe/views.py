@@ -19,12 +19,15 @@ def an_noskhe(request):
 
 @api_view(['POST'])
 def answare(request):
-    a=request.data['Nationalcode']
-    x=answare_user(a,many=True)
+    # return Response(request.data)
+    x=answare_user(data=request.data)
     if x.is_valid():
-        m=sick.objects.filter(Nationalcode=x.data['nath_code'])
+
+        m=sick.objects.filter(Nationalcode=x.data['Nationalcode'])
         m=m.filter(statuc=True)
         if m:
-            return Response(m.data)
+            
+            zz=noskhe_h.objects.filter(Uid=m[0].id)
+            return Response(zz[0].Ideadoctor)
         else:
             return Response({'answare':'no national code'})

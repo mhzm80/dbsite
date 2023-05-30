@@ -6,5 +6,5 @@ class ser_noskhe(serializers.ModelSerializer):
         model=noskhe_h
         fields="__all__"
 
-class answare_user(serializers.ModelSerializer):
-    nath_code=serializers.CharField(max_length=200)
+class answare_user(serializers.Serializer):
+    Nationalcode=serializers.CharField(max_length=200,required=True)
